@@ -1,0 +1,22 @@
+{
+  "name": "JoG - Jif or Gif, which is it?",
+  "description": "Heroku Pipelines, and Private Spaces Demo",
+  "repository": "https://github.com/mattcreager/jog",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/",
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "NODE_ENV": "staging"
+  },
+  "addons": [
+    "heroku-redis",
+    "heroku-postgres"
+  ],
+  "image": "heroku/nodejs"
+}
