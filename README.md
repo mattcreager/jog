@@ -1,6 +1,7 @@
 # JoG
 
-`npm install`, then `npm start`
+- `npm install`
+- `npm start`
 
 ## Deploy this App to Heroku
 
