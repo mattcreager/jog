@@ -16,7 +16,7 @@
   },
   "addons": [
     "heroku-redis",
-    "heroku-postgres"
+    "heroku-postgresql"
   ],
   "image": "heroku/nodejs"
 }
