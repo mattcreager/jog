@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(publicPath));
 
-if (!config.isProduction) {
+if (!config.isProduction && process.env.NODE_ENV !== 'staging') {
   const proxy = createProxyServer();
 
   const bundle = require('./bundle.js');
