@@ -41,14 +41,14 @@ const App = React.createClass({
 
     function getNumber() {
       if (env.location === 'frankfurt') {
-        return <h3 className="instructions">Text +49 15735982060 either GIF or JIF to vote</h3>
+        return <h2 className="instructions"><span className="flag-de"></span> +49 15735982060</h2>
       }
 
       if (env.location === 'tokyo') {
-        return <h3 className="instructions">Text +81 345402483 either GIF or JIF to vote</h3>
+        return <h2 className="instructions"><span className="flag-jp"></span> +81 345402483</h2>
       }
 
-      return <h3 className="instructions">Text 1 (650) 966 5443 either GIF or JIF to vote</h3>
+      return <h2 className="instructions"><span className="flag-us"></span> 1-(650)-966-5443</h2>
     }
 
     return <div>

@@ -41,6 +41,10 @@ header {
   background-image: url(img/jp.svg);
 }
 
+.flag-de {
+  background-image: url(img/de.svg);
+}
+
 #poweredby {
   text-align: center;
   font-size: 40px;
