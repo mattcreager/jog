@@ -75,6 +75,10 @@ if (!config.isProduction && process.env.NODE_ENV !== 'staging') {
     let appName = process.env.HEROKU_APP_NAME
     let pr = appName ? _.last(appName.split('-')) : null
 
+    if (!_.isNumber(pr)) {
+      pr = null
+    }
+
     // bring the new client up to speed
     socket.emit('results', results);
 
