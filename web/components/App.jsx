@@ -32,7 +32,7 @@ const App = React.createClass({
 
       if (env.env === 'staging') {
         if (env.pr) {
-          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</strong></a></p>
+          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></strong></p>
         }
 
         return <p className="env">Enviroment: Staging</p>
@@ -52,9 +52,11 @@ const App = React.createClass({
     }
 
     return <div>
+
       { getEnv() }
       { getNumber() }
-      <div className="chart gradient-primary">
+
+      <div className="chart">
         <div id="option-1" className="option">
         <div className="results">
           <div className="on" style={{width: jifPerc+'%'}}></div>
@@ -74,8 +76,8 @@ const App = React.createClass({
         </div>
       </div>
 
-      <footer className="text-center container">
-       <p className="text-muted"> &copy; 2015 Heroku</p>
+      <footer className="text-center">
+       <p> &copy; 2015 Heroku</p>
       </footer>
     </div>;
   }

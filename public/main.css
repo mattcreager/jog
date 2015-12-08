@@ -45,6 +45,15 @@ header {
   background-image: url(img/de.svg);
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgba(255,255,255,.5);
+  box-sizing: border-box;
+}
+
 #poweredby {
   text-align: center;
   font-size: 40px;
@@ -123,7 +132,8 @@ header {
   vertical-align: middle;
   text-align: center;
   position: absolute;
-  margin-left: 620px;
+  margin-left: -100px;
+  left: 50%;
   margin-top: -1px;
   font-size: 72px;
   z-index: 1;
