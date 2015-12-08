@@ -57,19 +57,19 @@ const App = React.createClass({
       <div className="chart gradient-primary">
         <div id="option-1" className="option">
         <div className="results">
-          <div className="on" style={{width: gifPerc+'%'}}></div>
+          <div className="on" style={{width: jifPerc+'%'}}></div>
         </div>
-        <h3 className="option-label">GIF
-          <span className="count">{numeral(gifPerc/100).format('0%')}</span>
+        <h3 className="option-label">JIF
+          <span className="count">{jifPerc ? numeral(jifPerc/100).format('0%') : ''}</span>
         </h3>
       </div>
       <div className="between">VS</div>
         <div id="option-2" className="option">
         <div className="results">
-          <div className="on" style={{width: jifPerc+'%'}}></div>
+          <div className="on" style={{width: gifPerc+'%'}}></div>
         </div>
-        <h3 className="option-label">JIF
-          <span className="count">{numeral(jifPerc/100).format('0%')}</span>
+        <h3 className="option-label">GIF
+          <span className="count">{gifPerc ? numeral(gifPerc/100).format('0%') : ''}</span>
         </h3>
         </div>
       </div>
