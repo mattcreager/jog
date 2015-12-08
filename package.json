@@ -1,7 +1,7 @@
 {
-  "name": "jog - jif vs gif",
+  "name": "jog",
   "version": "0.0.0",
-  "description": "",
+  "description": "JoG - Jif or Gif, which is it?",
   "main": "server/index.js",
   "scripts": {
     "bundle": "webpack -p --config webpack.production.config.js",
