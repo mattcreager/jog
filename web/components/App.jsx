@@ -32,7 +32,7 @@ const App = React.createClass({
 
       if (env.env === 'staging') {
         if (env.pr) {
-          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</strong></a></p>
+          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></strong></p>
         }
 
         return <p className="env">Enviroment: Staging</p>
