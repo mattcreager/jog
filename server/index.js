@@ -72,8 +72,17 @@ if (!config.isProduction) {
   io.on('connection', (socket) => {
     console.log('Socket connected');
 
+    let appName = process.env.HEROKU_APP_NAME
+    let pr = appName ? _.last(appName.split('-')) : null
+
     // bring the new client up to speed
     socket.emit('results', results);
+
+    socket.emit('env', {
+      env: process.env.NODE_ENV || 'production',
+      location: process.env.LOCATION || 'us',
+      pr: pr
+    })
 
     setInterval(function() {
       socket.emit('results', results);
