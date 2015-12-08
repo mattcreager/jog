@@ -27,15 +27,15 @@ const App = React.createClass({
       }
 
       if (env.env === 'development') {
-        return <p className="env">Enviroment: <strong>Development</strong></p>
+        return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: <strong>Development</strong></p></div>
       }
 
       if (env.env === 'staging') {
         if (env.pr) {
-          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></strong></p>
+          return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></strong></p></div>
         }
 
-        return <p className="env">Enviroment: Staging</p>
+        return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: Staging</p></div>
       }
     }
 
@@ -54,7 +54,15 @@ const App = React.createClass({
     return <div>
 
       { getEnv() }
-      { getNumber() }
+
+      <header className="row text-center">
+        <h2>Text <strong>GIF</strong> or <strong>JIF</strong> to vote</h2>
+        <div className="col-md-4 col-md-offset-4">
+          <div className="panel u-margin-Ts u-padding-Bs">
+            { getNumber() }
+          </div>
+        </div>
+      </header>
 
       <div className="chart">
         <div id="option-1" className="option">
