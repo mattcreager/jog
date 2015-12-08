@@ -27,15 +27,15 @@ const App = React.createClass({
       }
 
       if (env.env === 'development') {
-        return <h3 className="env">Enviroment: Development</h3>
+        return <p className="env">Enviroment: <strong>Development</strong></p>
       }
 
       if (env.env === 'staging') {
         if (env.pr) {
-          return <h3 className="env">Enviroment: Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></h3>
+          return <p className="env">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</strong></a></p>
         }
 
-        return <h3 className="env">Enviroment: Staging</h3>
+        return <p className="env">Enviroment: Staging</p>
       }
     }
 
