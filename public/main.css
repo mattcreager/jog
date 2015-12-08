@@ -1,41 +1,44 @@
-
-
-.instructions {
-  position: absolute;
-  right: 50px;
-  top: 220px;
-  font-weight: bold;
-}
-
-.env {
-  position: absolute;
-  left: 50px;
-  top: 220px;
-  font-weight: bold;
-}
-
-@import url(//fonts.googleapis.com/css?family=Quicksand:300,400);
-
-html {
-  height: 100%;
-  font-size: 100%;
-  font-weight: 400;
-  font-family: 'Quicksand', Helvetica, Arial, sans-serif;
-}
-
+html,
 body {
-  background: white;
-  width: 100%;
+  height: 100%;
+  position: relative;
   margin: 0;
   padding: 0;
 }
 
-.title {
-  text-align: center;
-  font-size: 90px;
+header {
+  margin-top: 20px;
+}
+
+  header > h2 {
+    color: rgba(255,255,255,.7);
+  }
+
+  header > h2 strong {
+    color: white;
+  }
+
+[class^="flag"] {
   display: inline-block;
-  width: 98%;
-  margin: 50px 1%;
+  width: 50px;
+  height: 37px;
+  position: relative;
+  top: 2px;
+  margin-bottom: -6px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+}
+
+.flag-us {
+  background-image: url(img/us.svg);
+}
+
+.flag-jp {
+  background-image: url(img/jp.svg);
 }
 
 #poweredby {
@@ -52,7 +55,7 @@ body {
 
 .chart {
   height: 200px;
-  margin: 286px 0;
+  margin: 100px auto;
   padding-top: 50px;
 }
 
