@@ -18,6 +18,10 @@ socket.on('results', results => {
   store.dispatch(setTopApps(fromJS(results)));
 });
 
+socket.on('env', env => {
+  store.dispatch(setRequestMetrics(fromJS(env)));
+})
+
 ReactDOM.render(
   // render with empty data initially; socket will fill it in
   <Provider store={store}>

@@ -15,7 +15,10 @@ const App = React.createClass({
     requestMetrics: React.PropTypes.instanceOf(Map).isRequired
   },
   render: function () {
+    let env = this.props.requestMetrics.toJSON()
     let votes = this.props.topApps.toJSON()
+
+    console.log(env)
 
     let totalVotes = votes['gif']+votes['jif']
     let gifPerc = votes['gif']/totalVotes*100

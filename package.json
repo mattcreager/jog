@@ -25,7 +25,7 @@
     "lodash": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz",
     "moment": "^2.10.6",
     "morgan": "^1.6.1",
-    "numeral": "^1.5.3",
+    "numeral": "https://registry.npmjs.org/numeral/-/numeral-1.5.3.tgz",
     "react": "^0.14.2",
     "react-addons-pure-render-mixin": "^0.14.2",
     "react-dom": "^0.14.2",
