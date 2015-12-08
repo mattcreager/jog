@@ -1,4 +1,4 @@
-# JOG
+# JoG
 
 `npm install`, then `npm start`
 
