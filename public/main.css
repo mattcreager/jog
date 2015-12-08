@@ -54,6 +54,10 @@ footer {
   box-sizing: border-box;
 }
 
+.mindblown {
+  background: url(img/mindblown.gif);
+}
+
 #poweredby {
   text-align: center;
   font-size: 40px;
