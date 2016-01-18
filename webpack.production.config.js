@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
-var buildPath = path.resolve(__dirname, 'public', 'build');
+var buildPath = path.resolve(__dirname, 'public', 'build')
 
 module.exports = {
   entry: './web/index.jsx',
@@ -22,4 +22,4 @@ module.exports = {
     filename: 'bundle.js'
   },
   devtool: 'source-map'
-};
+}
