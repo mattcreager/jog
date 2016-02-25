@@ -25,16 +25,12 @@ const App = React.createClass({
       if (!env.env || env.env === 'production') {
         return ''
       }
-
-      if (env.env === 'development') {
-        return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: <strong>Development</strong></p></div>
+      
+      if (env.env === 'review') {
+        return <div className="alert alert-success text-center u-margin-As"><p className="env test">Enviroment: <strong>Review App <a href={'https://github.com/mattcreager/jog/pull/' + env.pr}>[PR #{env.pr}]</a></strong></p></div>
       }
 
       if (env.env === 'staging') {
-        if (env.pr) {
-          return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: <strong>Staging <a href={'https://github.com/mattcreager/jog/pulls/' + env.pr}>[link to PR]</a></strong></p></div>
-        }
-
         return <div className="alert alert-info text-center u-margin-As"><p className="env test">Enviroment: Staging</p></div>
       }
     }

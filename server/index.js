@@ -70,20 +70,23 @@ if (!config.isProduction && process.env.NODE_ENV !== 'staging') {
   server.listen(config.httpPort, () => console.log(`Server listening on ${config.httpPort}`));
 
   io.on('connection', (socket) => {
-    console.log('Socket connected');
-
     let appName = process.env.HEROKU_APP_NAME
-    let pr = appName ? _.last(appName.split('-')) : null
+    let pr = _.isString(appName) ? +_.last(appName.split('-')) : null
+    let env = process.env.NODE_ENV || 'staging'
 
     if (!_.isNumber(pr)) {
       pr = null
+    }
+
+    if (pr) {
+      env = 'review'
     }
 
     // bring the new client up to speed
     socket.emit('results', results);
 
     socket.emit('env', {
-      env: process.env.NODE_ENV || 'production',
+      env: env,
       location: process.env.LOCATION || 'us',
       pr: pr
     })
@@ -96,4 +99,3 @@ if (!config.isProduction && process.env.NODE_ENV !== 'staging') {
       console.log('Socket disconnected');
     });
   });
-
