@@ -25,7 +25,7 @@ const App = React.createClass({
       if (!env.env || env.env === 'production') {
         return ''
       }
-      
+
       if (env.env === 'review') {
         return <div className="alert alert-success text-center u-margin-As"><p className="env test">Enviroment: <strong>Review App <a href={'https://github.com/mattcreager/jog/pull/' + env.pr}>[PR #{env.pr}]</a></strong></p></div>
       }
@@ -81,7 +81,7 @@ const App = React.createClass({
       </div>
 
       <footer className="text-center">
-       <p> &copy; 2015 Heroku</p>
+       <p> &copy; 2016 Heroku</p>
       </footer>
     </div>;
   }
